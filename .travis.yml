@@ -18,4 +18,3 @@ deploy:
     backet_path: "sample-app"
     on:
         branch: master 
-    skip_cleanup: true
