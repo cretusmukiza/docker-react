@@ -12,13 +12,13 @@ script:
   - docker run cretus/docker-react npm run test -- --coverage
 
 deploy:
-  provider: elasticbeanstalk
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  provider: elasticbeanstalk  
   region: "us-west-2"
   app: "sample-app"
   env: "SampleApp-env"
   bucket_name: "elasticbeanstalk-us-west-2-275267023652"
-  bucket_path: "sample-app"
+  bucket_path: "sample-app" 
   on:
     branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
